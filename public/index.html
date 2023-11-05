@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Basic API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="name">Hi Sam</h1>
+    <button onclick = change() >Say </button>
+
+    <script>
+        function change() // no ';' here
+{
+    var btn = document.getElementById("name");
+    if(btn.innerText=="Hi Sam"){
+       btn.innerText="Bye Sam";
+      }
+    else{
+      btn.innerText="Hi Sam";
+      }
+
+}
+    </script>
+</body>
+</html>
