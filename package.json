@@ -12,7 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
+  
 }
