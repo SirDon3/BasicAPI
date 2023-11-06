@@ -12,8 +12,8 @@ document.querySelector('#bntLoadJoke').addEventListener('click', () => {
 async function getDadJoke() {
     const response = await fetch('/dadjoke');
     const data = await response.json();
-    let jokeSetup = data.body[0].setup;
-    let jokePunchline = data.body[0].punchline;
+    let jokeSetup = data.setup;
+    let jokePunchline = data.punchline;
     console.log(jokeSetup, jokePunchline);
     document.querySelector('#jokeSetup').textContent = jokeSetup;
     document.querySelector('#jokePunchline').textContent = jokePunchline;
@@ -36,7 +36,7 @@ async function getDadImage() {
         img.src = dadImageURL;
         img.id = 'dadImage';
         img.alt = dadImageALT;
-        document.querySelector('body').appendChild(img);
+        document.querySelector('.jokeGen').appendChild(img);
         console.log(dadImageURL, dadImageALT);
     
 

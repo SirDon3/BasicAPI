@@ -10,4 +10,55 @@ html {
 body{
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background: center / auto url('/joe-unsplash.jpg');
+    color: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.jokeGen {
+    padding: 2rem;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(227, 61, 0);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: background-color 150ms ease-in-out;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+button:hover {
+    background: orangered;
+}
+
+#jokeSetup{
+ 
+    margin-top: 1rem;
+    padding: 0.25rem;
+}
+
+#jokePunchline{
+
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+}
+
+#dadImage{
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 1rem;
 }

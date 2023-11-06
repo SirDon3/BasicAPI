@@ -1,4 +1,6 @@
+import dotenv from 'dotenv'
 import express from 'express';
+dotenv.config()
 const app = express();
 const port = 3000;
 import fetch from 'node-fetch';
@@ -10,14 +12,16 @@ app.listen(port, () => {
     console.log(`App is listening at http://localhost:${port}`);
 });
 
+const api_key = process.env.API_KEY;
+
 app.get('/dadjoke', async (req, res) =>{
 
-    const url = 'https://dad-jokes.p.rapidapi.com/random/joke';
+    const url = 'https://joke110.p.rapidapi.com/random_joke';
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '2f99d7204cmsh85c19c62c243facp1bfe25jsne82c9107d4b3',
-        'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+        'X-RapidAPI-Key': api_key,
+        'X-RapidAPI-Host': 'joke110.p.rapidapi.com'
       }
     };
     
@@ -31,11 +35,11 @@ app.get('/dadjoke', async (req, res) =>{
 
 app.get('/dadimage', async (req, res) =>{
 
-    const url = 'https://bing-image-search1.p.rapidapi.com/images/search?q=Willem%20Dafoe&count=10';
+    const url = 'https://bing-image-search1.p.rapidapi.com/images/search?q=Willem%20Dafoe&count=20';
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '2f99d7204cmsh85c19c62c243facp1bfe25jsne82c9107d4b3',
+            'X-RapidAPI-Key': api_key,
             'X-RapidAPI-Host': 'bing-image-search1.p.rapidapi.com'
         }
     };
