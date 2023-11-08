@@ -12,6 +12,29 @@ app.listen(port, () => {
     console.log(`App is listening at http://localhost:${port}`);
 });
 
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+    res.render('../views/main/index');
+});
+
+app.get('/weather', (req, res) => {
+    res.render('../views/main/weather');
+});
+
+app.get('/blog', (req, res) => {
+    res.render('../views/main/blog');
+});
+
+app.get('/about', (req, res) => {
+    res.render('../views/about');
+});
+
+
+app.use((req, res) => {
+    res.status(404).render('404', { title: '404' })
+})
+
 const api_key = process.env.API_KEY;
 
 app.get('/dadjoke', async (req, res) =>{

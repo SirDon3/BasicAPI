@@ -16,6 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
 }
 
 h1 {
@@ -62,3 +63,48 @@ button:hover {
     margin-top: 1rem;
     border-radius: 1rem;
 }
+
+.about{
+    
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    
+}
+
+.not-found{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  nav li{
+    list-style-type: none;
+    margin-left: 20px;
+  }
+  nav h1{
+    font-size: 3em;
+  }
+  nav p, nav a{
+    color: #000000;
+    font-weight: 300;
+  }
