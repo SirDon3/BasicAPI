@@ -10,7 +10,7 @@ html {
 body{
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 50vh;
     background: center / auto url('/joe-unsplash.jpg');
     color: #101010;
     display: flex;
@@ -74,37 +74,39 @@ button:hover {
     
 }
 
-.not-found{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+nav,
+.nav-links {
+    display: flex;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: auto;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    text-transform: uppercase;
-  }
-  nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  nav li{
-    list-style-type: none;
-    margin-left: 20px;
-  }
-  nav h1{
-    font-size: 3em;
-  }
-  nav p, nav a{
-    color: #000000;
-    font-weight: 300;
-  }
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
